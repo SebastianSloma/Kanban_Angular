@@ -14,7 +14,16 @@
 
     <div class="board-wrapper">
       <div class="board-columns">
-        <div class="board-column">
+        <div class="board-column"
+
+          cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[doneList]"
+    
+    (cdkDropListDropped)="drop($event)"
+>
+
           <div class="column-title">
             Ideas
         </div>
